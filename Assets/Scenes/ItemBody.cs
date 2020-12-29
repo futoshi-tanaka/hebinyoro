@@ -23,12 +23,13 @@ public class ItemBody : MonoBehaviour
         {
             // プレイヤー
             case "Player":
-            Destroy(gameObject);
+            GetComponent<AudioSource>().Play();
+            //Destroy(gameObject);
             break;
             
             default:
             // 生成時に何かしらのオブジェクトと重なっていたら再生成させる(適当すぎる)
-            var x = Random.Range(-5.0f, 5.0f);
+            var x = Random.Range(-8.0f, 8.0f);
             var y = Random.Range(-3.0f, 3.0f);
             transform.position = new Vector3(x, y, 0.0f);
             break;

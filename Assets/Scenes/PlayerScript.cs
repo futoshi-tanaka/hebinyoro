@@ -64,6 +64,7 @@ public class PlayerScript : MonoBehaviour
             // 敵
             case "Enemy":
             //Destroy(gameObject);
+            GetComponent<AudioSource>().Play();
             SceneManager.LoadScene("ResultScene");    
             break;
 
