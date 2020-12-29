@@ -19,6 +19,8 @@ public class BodyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 毎回やってもよさそう
+        Player = GameObject.Find("PlayerPrefab");
         if(Player != null)
         {
             transform.position = Vector3.Lerp(transform.position, Parent.transform.position, 0.1f);

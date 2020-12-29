@@ -31,10 +31,10 @@ public class PlayerScript : MonoBehaviour
     // キャラクター移動制御
     void UpdateMove()
     {
-        // todo なんか左に行き過ぎるとキャラきえる！あとで調べる
-
         var direction = Quaternion.Euler(Angles) * Vector3.forward;
         transform.position += direction * Speed * Time.deltaTime;
+        // Z座標補正
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0.0f);
 
         // Debug.Log(transform.position);
     }
@@ -44,12 +44,12 @@ public class PlayerScript : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Rotate(0.0f, 0.0f, -1.0f);
+            // transform.Rotate(0.0f, 0.0f, -1.0f);
             Angles.x -= 1.0f;
         }
         if(Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Rotate(0.0f, 0.0f, 1.0f);
+            // transform.Rotate(0.0f, 0.0f, 1.0f);
             Angles.x += 1.0f;
         }
     }
