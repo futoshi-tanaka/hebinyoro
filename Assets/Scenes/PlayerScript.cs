@@ -45,12 +45,12 @@ public class PlayerScript : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Rotate(0.0f, 0.0f, -1.0f);
-            Angles.x -= 0.3f;
+            Angles.x -= 1.0f;
         }
         if(Input.GetKey(KeyCode.RightArrow))
         {
             transform.Rotate(0.0f, 0.0f, 1.0f);
-            Angles.x += 0.3f;
+            Angles.x += 1.0f;
         }
     }
 

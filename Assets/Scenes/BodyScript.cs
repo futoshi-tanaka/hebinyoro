@@ -21,7 +21,7 @@ public class BodyScript : MonoBehaviour
     {
         if(Player != null)
         {
-            transform.position = Vector3.Lerp(transform.position, Parent.transform.position, 0.01f);
+            transform.position = Vector3.Lerp(transform.position, Parent.transform.position, 0.1f);
         }
     }
 
